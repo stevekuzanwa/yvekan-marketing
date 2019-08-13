@@ -1,0 +1,1678 @@
+/***********************************************/
+/*************** GENERAL STYLES ****************/
+/***********************************************/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+
+/******************************************************/
+/*************** START: HEADER SECTION ****************/
+/******************************************************/
+
+/** Navigation **/
+
+.navigation {
+    width: 100%;
+    z-index: 9999;
+    background-color: transparent;
+    position: fixed;
+}
+
+
+.header .navigation h1 {
+    float: left;
+    padding: 16px 0 16px 10px;
+    color: #fff;
+    font-size: 26px;
+    z-index: 999;
+}
+
+.header .navigation h1 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/** Nav Menu **/
+
+.header .navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.header .navigation ul li {
+    float: left;
+}
+
+.header .navigation ul li a:link,
+.header .navigation ul li a:visited {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    padding: 24px  10px 24px;
+    text-decoration: none;
+    color: #fff;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.header .navigation ul li a:hover,
+.header .navigation ul li a:active {
+    color: #94cef4;
+}
+
+
+/** StickyNav with jQuery**/
+
+.is-sticky .navigation {
+    background-color:  #fff;
+    width: 100%;
+    border-bottom: 1px solid #b5b2b2;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    z-index: 9999;
+}
+
+.is-sticky .navigation h1 {
+    float: left;
+    font-size: 26px;
+    color: #2980b9;
+}
+
+.is-sticky .navigation h1 a {
+    color: #2980b9;
+}
+
+.is-sticky .navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.is-sticky .navigation ul li {
+    float: left;
+}
+
+.is-sticky .navigation nav ul a:link, 
+.is-sticky .navigation  nav ul a:visited  {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    padding: 24px  10px 24px;
+    text-decoration: none;
+    color: #2980b9; 
+    -webkit-transition: all .5s; 
+    transition: all .5s;
+}
+
+.is-sticky .navigation nav ul a:hover, 
+.is-sticky .navigation nav ul a:active {
+    color: #000; 
+}
+
+.is-sticky .navigation nav ul a.active {
+    background-color: #2980b9;
+    color: #fff; 
+}
+
+
+/** Mobile Nav Menu **/
+
+.mobileNavIcon {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    display: none;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 6px 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-7px, -6px) ;
+    transform: rotate(45deg) translate(-7px, -6px) ;
+}
+
+.is-sticky .navigation .mobileNavIcon .bar1,
+.is-sticky .navigation .mobileNavIcon .bar2,
+.is-sticky .navigation .mobileNavIcon .bar3 {
+    background-color: #2980b9;
+}
+
+/** BG Slides **/
+
+.header #home {
+    z-index: 1;
+	position: relative;
+    height: 750px;
+}
+
+.header .slides {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+}
+
+.header .slides .slide1 {
+    background-image: -webkit-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/bg-seo-ppc-social-media-marketing.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/bg-seo-ppc-social-media-marketing.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: 650px;
+}
+
+.header .slides .slide2 {
+    background-image: -webkit-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/bg-seo.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/bg-seo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: 650px;
+}
+
+.header .slides .slide3 {
+    background-image: -webkit-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/bg-ppc.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/bg-ppc.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: 650px;
+}
+
+.header .slides .slide4 {
+    background-image: -webkit-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/bg-social-media-marketing.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/bg-social-media-marketing.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    height: 650px;
+}
+
+
+/** Header Subtitle ***/
+
+.header .title {
+    text-align: center;
+    font-size: 51px;
+    color: #fff;
+    width: 100%;
+    padding: 236px 20px  0;
+    background-color: transparent;
+}
+
+.header .details {
+    text-align: center;
+    font-size: 40px;
+    padding: 0 20px;
+    font-weight: 300;
+    color: #fff;
+}
+
+/** Button Area **/
+
+.header .buttons {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.header .buttons a:link,
+.header .buttons a:visited {
+    border: 2px solid #fff;
+    padding: 10px  16px;
+    font-weight: bold;
+    color: #fff;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s; 
+    cursor: pointer;
+    text-decoration: none;
+} 
+
+
+.header .buttons a:hover,
+.header .buttons a:active {
+	color: #2980b9;
+    background-color: white;
+}
+
+
+
+/*************** MEDIA QUERIES FOR THE HEADER SECTION ****************/
+
+@media only screen and (max-width: 1024px) {
+    .header .slides .slide1,
+    .header .slides .slide2,
+    .header .slides .slide3,
+    .header .slides .slide4 {
+        height: 500px;
+    } 
+    
+    .header .title {
+        font-size: 41px;
+        width: 100%;
+        margin-top: 136px;
+        padding: 0 10px;
+    }
+
+    .header .details {
+        font-size: 30px;
+        padding: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    
+    /** Mobile Navigation **/
+
+    .mobileNavIcon {
+        display: block;    
+    }  
+
+    .navigation {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .header .navigation h1 {
+        color: #fff;
+    }
+
+    
+    .header .navigation h1 {
+        font-size: 18px;
+        float: none;
+    }
+    
+    .header .navigation ul {
+        float: none;
+        display: none;
+        background-color: #2980b9;
+    }
+    
+    .header .navigation ul li {
+       float: none;
+    }
+
+    .header .navigation ul li a:hover,
+    .header .navigation ul li a:active {
+        color: #000;
+    }
+    
+    .is-sticky .navigation h1 {
+        color: #2980b9;
+    }
+
+    .is-sticky .navigation ul {
+        background-color: #2980b9;
+        border-top: 1px solid #b5b2b2;
+    }
+    
+    .is-sticky .navigation nav ul a:link, 
+    .is-sticky .navigation  nav ul a:visited  {
+        color: #fff;
+    }
+
+    .is-sticky .navigation nav ul a:hover, 
+    .is-sticky .navigation nav ul a:active {
+        color: #000;
+    }
+    
+    .is-sticky .navigation nav ul a.active {
+        color: #000; 
+    }
+    
+    
+    .header .slides .slide1 {
+         background-image: -webkit-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/small-bg-seo-ppc-social-media-marketing.jpg);
+         background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/small-bg-seo-ppc-social-media-marketing.jpg);
+    }
+
+    .header .slides .slide2 {
+         background-image: -webkit-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/small-bg-seo.jpg);
+         background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/small-bg-seo.jpg);
+    }
+
+    .header .slides .slide3 {
+         background-image: -webkit-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/small-bg-ppc.jpg);
+         background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/small-bg-ppc.jpg);
+    }
+
+    .header .slides .slide4 {
+         background-image: -webkit-linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/small-bg-social-media-marketing.jpg);
+         background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../images/photos/small-bg-social-media-marketing.jpg);
+    }  
+}
+
+@media only screen and (max-width: 650px) {
+
+    .header .title {
+        font-size: 31px;
+    }
+
+    .header .details {
+        font-size: 25px;
+    }
+    
+    .header .buttons {
+        padding: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .header .navigation h1 {
+        font-size: 16px;
+    }
+    
+    .header .title {
+        font-size: 25px;
+    }
+
+    .header .details {
+        font-size: 20px;
+    }
+    
+    .header .buttons {
+        margin-top: 30px;
+    }
+    
+    .header .buttons a {
+        padding: 10px  16px;
+        display: block;
+        margin: 0 auto;
+        width: 150px;
+        text-align: center;
+    } 
+}
+
+
+/****************************************************/
+/*************** END: HEADER SECTION ****************/
+/****************************************************/
+
+
+
+
+/******************************************************/
+/************** START: SERVICES SECTION ***************/
+/******************************************************/
+
+.services {
+   margin-top: 585px;
+}
+
+.services  .container {
+    padding: 71px   10px   0;
+    text-align: center; 
+
+}
+
+
+/** Services Introduction **/
+
+.services .title {
+   font-size: 30px;
+}
+
+.services .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #2980b9;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+
+.services p {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+
+
+/** what_We_do **/
+
+.services .what_We_do {
+    margin-bottom: 91px;
+}
+
+.services h2 {
+    margin-bottom: 28px; 
+}
+
+.services #seo {
+    background-image: url(../images/icons/seo.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 150px;
+}
+
+.services #ppc {
+    background-image: url(../images/icons/ppc.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 150px;
+}
+
+.services #socialmedia {
+    background-image: url(../images/icons/socialmedia.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 150px;
+}
+
+.services .row h2 {
+    font-size: 20px;
+}
+
+.services .row p{
+    font-size: 17px;
+    margin-bottom: 38px;
+}
+
+
+/** Button Area **/
+
+.services a {
+    padding: 21px 28px;
+    background-color: #2980b9;
+    color:#fff;
+    font-weight: bold;
+    font-size: 16px;
+    outline: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; 
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid transparent;
+}
+
+.services a:hover,
+.services a:active {
+	background-color: #fff;
+    color:#2980b9;
+    border: 2px solid #2980b9;
+}
+
+/** POPUP - READ MORE CONTENT  **/
+
+.white-popup {
+  position: relative;
+  background: #FFF;
+  padding: 30px;
+  width: auto;
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: center;
+  font-size: 18px;
+}
+
+.white-popup img {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.white-popup h3 {
+    color: #2980b9;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+/** Parallax Effect - Services Section **/
+
+.services .parallaxEffect {
+   background-image:-webkit-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/photos/bg-your-success-is-our-success.jpg);
+   background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/photos/bg-your-success-is-our-success.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: 50% 50%;
+   height: 270px;
+   color: #fff;
+}
+
+.services .parallaxEffect  .container {
+    padding: 5%   10px;
+   
+}
+
+.services .parallaxEffect  .container p {
+    font-size: 24px;
+    line-height: 140%;
+   
+}
+
+
+/*************** MEDIA QUERIES FOR THE SERVICES SECTION ****************/
+
+@media only screen and (max-width: 1024px) {
+     
+    .services {
+       margin-top: 435px;
+    }
+
+    .services p, .services .row p, .services .row h2{
+    font-size: 16px;
+    }
+    
+    .services .parallaxEffect  .container {
+    padding: 8%   10px;
+   
+    }
+
+    .services .parallaxEffect  .container p {
+    font-size: 20px;
+    line-height: 140%;
+    }
+   
+}
+
+@media only screen and (max-width: 800px) {
+     .services .row {
+      width: 100%;
+    }
+    
+    .services .row h2 {
+    font-size: 22px;
+    }
+    
+    .services .col {
+	float:none;
+	margin-left: 0;
+    margin-right: 0;
+    }
+    
+    .services .parallaxEffect  .container {
+    padding: 10%   10px;
+   
+    }
+    
+    .services .parallaxEffect  .container p {
+    font-size: 18px;
+    line-height: 140%;
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .services .parallaxEffect  .container {
+    padding: 15%   10px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+    .services .title {
+       font-size: 25px;
+     }
+
+    .services .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+
+}
+
+
+/******************************************************/
+/*************** END: SERVICES SECTION ****************/
+/******************************************************/
+
+
+
+
+
+/**********************************************************/
+/************** START: CASE STUDIES SECTION ***************/
+/**********************************************************/
+
+.caseStudies .container {
+    padding: 71px   10px   0;
+    text-align: center;
+}
+
+/** Case Studies Introduction **/
+
+.caseStudies .title {
+   font-size: 30px;
+}
+
+.caseStudies .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #2980b9;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+.caseStudies h2  {
+    margin-bottom: 28px; 
+}
+
+.caseStudies p {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+
+/** Case Studies - Filtering Menu **/
+
+.caseStudies ul.portfolio-filter {
+    list-style-type: none;
+    margin: 30px auto 28px;
+    padding: 0;
+    width: 80%;
+    display: block;
+}
+
+.caseStudies ul.portfolio-filter li {
+   display: inline-block;
+}
+
+.caseStudies ul.portfolio-filter li a {
+    display: block;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.caseStudies ul.portfolio-filter li a.active {
+    color: #2980b9;
+}
+
+/** Our Work **/
+
+.caseStudies ul.ourwork {
+    list-style-type: none;
+}
+
+.caseStudies ul.ourwork li {
+    width: 33.3333333%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+.caseStudies ul.ourwork img {
+    width: 100%;
+    display: block;
+}
+
+.caseStudies ul.ourwork li  .caption img {
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.caseStudies ul.ourwork li .caption:hover img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.caseStudies ul.ourwork li .photoOverlay {
+    padding:  35% 0;
+    position: absolute;
+    background-color: rgba(41, 128, 185, 0.8);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    opacity: 0;
+    -webkit-transition: all  0.5s;
+    transition: all  0.5s;
+    text-align: center;
+    width: 100%;
+}
+
+.caseStudies ul.ourwork li   .photoOverlay:hover  {
+    opacity: 1;
+}
+
+.caseStudies ul.ourwork li   .photoOverlay h2 {
+    text-align: center;
+}
+
+.caseStudies ul.ourwork li   .photoOverlay h2:after {
+      content: "";
+      display: block;
+      width: 150px;
+      height: 5px;
+      background-color: #fff;
+      margin: 20px auto;
+}
+
+/** POPUP - CASE STUDIES  **/
+
+.caseStudie-popup {
+  position: relative;
+  background: #FFF;
+  width: auto;
+  max-width: 700px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.caseStudie-popup img {
+    width: 100%;
+}
+
+.caseStudie-popup P {
+ padding: 20px;
+ font-size: 16px;
+ line-height: 150%;
+}
+
+/*************** MEDIA QUERIES FOR THE CASE STUDIES SECTION ****************/
+
+@media only screen and (max-width: 900px) {
+    
+    .caseStudies ul.ourwork li {
+    width: 50%;
+    }
+
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+    .caseStudies .title {
+       font-size: 25px;
+     }
+
+    .caseStudies .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+    
+    .caseStudies ul.ourwork li {
+    width: 100%;
+    }
+    
+    .caseStudies ul.ourwork li   .photoOverlay p {
+     display: block;
+    }
+    
+}
+
+@media only screen and (max-width: 320px) {
+    .caseStudies ul.ourwork li   .photoOverlay p {
+     display: none;
+    }
+}
+
+/**********************************************************/
+/*************** END: CASE STUDIES SECTION ****************/
+/**********************************************************/
+
+
+
+
+
+/**************************************************/
+/************** START: TEAM SECTION ***************/
+/**************************************************/
+
+.meetOurTeam .container {
+    padding: 71px   10px   0;
+    text-align: center;
+   
+}
+
+
+/** Team Introduction **/
+
+.meetOurTeam .title {
+   font-size: 30px;
+}
+
+.meetOurTeam  .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #2980b9;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+ 
+.meetOurTeam h2  {
+    margin-bottom: 28px;
+}
+
+.meetOurTeam p {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+/** Team Members **/
+
+.teamMembers {
+    margin-top: 28px;
+}
+
+.meetOurTeam ul.teamMembers  {
+    list-style-type: none;
+}
+
+
+.meetOurTeam ul.teamMembers img {
+     width: 100%;
+     
+}
+
+/** Images Overlay **/
+
+.meetOurTeam .teamMembers a {
+    text-decoration: none;
+}
+
+.meetOurTeam .teamMembers p span {
+    font-weight: bold;
+}
+
+.meetOurTeam .teamMembers .caption {
+    position: relative;
+}
+
+.meetOurTeam .teamMembers .photo_Overlay {
+    position: absolute;
+    color: white;
+    background-color: rgba(41, 128, 185, 0.7);
+    padding: 31px  15px;
+    margin: 0 15%;
+    bottom: 12%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    width: 70%;
+    opacity: 0;
+    
+}
+
+.meetOurTeam .teamMembers .caption:hover .photo_Overlay {
+    opacity: 1;
+}
+
+/** Parallax Effect - Team Section **/
+
+.meetOurTeam .parallaxEffect {
+   background-image:-webkit-linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/photos/bg-when-you-grow-we-grow.jpg);
+   background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(../images/photos/bg-when-you-grow-we-grow.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: 50% 50%;
+   height: 270px;
+   color: #fff;
+   margin-top: 52px;
+}
+
+.meetOurTeam .parallaxEffect  .container {
+    padding: 80px   10px;
+   
+}
+
+.meetOurTeam .parallaxEffect  .container p {
+    font-size: 24px;
+   
+}
+
+/*************** MEDIA QUERIES FOR THE TEAM SECTION ****************/
+
+
+@media only screen and (max-width: 1000px) {
+    
+    .meetOurTeam p {
+    font-size: 16px;
+    }
+   
+}
+
+
+@media only screen and (max-width: 600px) {
+    
+    .meetOurTeam ul.teamMembers .col {
+        margin: 1% 0 1%;
+    }
+    
+    .meetOurTeam ul.teamMembers li {
+          width: 100%;
+          padding: 0 100px;
+    }
+
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+    .meetOurTeam .title {
+       font-size: 25px;
+     }
+
+    .meetOurTeam .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+    
+    .meetOurTeam ul.teamMembers li {
+          padding: 0 20px;
+    }
+
+}
+
+@media only screen and (max-width: 320px) {
+    
+    .meetOurTeam ul.teamMembers li {
+          padding: 0;
+    }
+
+}
+
+
+/************************************************/
+/************** END: TEAM SECTION ***************/
+/************************************************/
+
+
+
+
+
+
+/**********************************************************/
+/************** START: TESTIMONIALS SECTION ***************/
+/**********************************************************/
+
+.testimonials .container {
+    padding: 71px  10px 0 ;
+    text-align: center;
+   
+}
+
+.clientTestimonials {
+    background-color: #2980b9;
+    color:#fff;
+    margin-top: 28px;
+}
+
+.clientTestimonials img {
+    width: 80%;
+    border-radius: 50%;
+}
+
+/** Testimonials Introduction **/
+
+.testimonials .title {
+   font-size: 30px;
+}
+
+.testimonials  .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #2980b9;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+.testimonials h2 {
+    margin-bottom: 28px;
+   
+}
+
+.testimonials p {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+/** Client Testimonials **/
+
+.testimonials .wrapper .client{
+    padding: 101px   10px   71px;
+    text-align: center;
+   
+}
+
+/** Client Quotes **/
+
+.testimonials .wrapper .quotes{
+    padding: 191px   10px   0;
+    text-align: center;
+   
+}
+
+/*************** MEDIA QUERIES FOR THE TESTIMONIALS SECTION ****************/
+
+
+@media only screen and (max-width: 1000px) {
+    
+    .testimonials .container {
+    padding: 71px  10px 0 ;
+   
+    }
+    
+    .testimonials .wrapper .quotes{
+    padding: 171px   10px   0;
+    text-align: center;
+   
+    }
+    
+    .col.quotes { 
+		margin: 1% 0 1% 0%;
+	}
+   
+}
+
+@media only screen and (max-width: 800px) {
+    
+    .testimonials .wrapper .quotes{
+    padding: 151px   10px   0;
+    text-align: center;
+   
+    }
+   
+}
+
+@media only screen and (max-width: 768px) {
+    
+    
+    .clientTestimonials img {
+        width: 100%;
+    }
+    .testimonials .wrapper .client {
+        width: 100%;
+        padding: 10%  35% 0;
+   
+    }
+    
+     .testimonials .wrapper .quotes{
+        width: 100%;
+        padding: 5% 10px 10%;
+   
+    }
+   
+}
+
+@media only screen and (max-width: 480px) {
+    
+    .testimonials .title {
+       font-size: 25px;
+     }
+
+    .testimonials .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+    
+    
+    
+    .testimonials .wrapper .client {
+        width: 100%;
+        padding: 20%  30% 0;
+   
+    }
+    
+     .testimonials .wrapper .quotes{
+        width: 100%;
+        padding: 10% 10px 20%;
+   
+    }
+   
+}
+
+@media only screen and (max-width: 320px) {
+    
+    .testimonials .wrapper .client {
+        width: 100%;
+        padding: 20%  20% 0;
+   
+    }
+    
+     .testimonials .wrapper .quotes{
+        width: 100%;
+        padding: 10% 10px 20%;
+   
+    }
+   
+}
+
+
+/********************************************************/
+/************** END: TESTIMONIALS SECTION ***************/
+/********************************************************/
+
+
+
+
+
+/**********************************************************/
+/************** START: CONTACT US SECTION *****************/
+/**********************************************************/
+
+.contactUs .container{
+    padding: 71px   10px   0;
+    text-align: center;
+   
+}
+
+/** Contact US Introduction **/
+
+.contactUs .title  {
+   font-size: 30px;
+}
+
+.contactUs  .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #2980b9;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+.contactUs h2  {
+    margin-bottom: 28px;
+   
+}
+
+
+.contactUs p {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+/** Contact Details **/
+
+.contactUs #contact_details {
+    padding: 0  10px;
+    margin-top: 61px;
+}
+
+/** Contact Detail Icons **/
+
+.contactUs #address {
+    background-image: url(../images/icons/location.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 80px;
+}
+
+.contactUs #phoneNumber {
+    background-image: url(../images/icons/telephone.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 80px;
+}
+
+.contactUs #writeMail {
+    background-image: url(../images/icons/email.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 80px;
+}
+
+
+/** Contact FORM **/
+
+.contactUs #contact-form{
+    padding: 0 10px 71px;
+    text-align: center;
+   
+}
+
+.contactUs input[type=text],
+.contactUs input[type=tel],
+.contactUs input[type=email],
+.contactUs textarea {
+    padding: 20px;
+    border: 2px solid #000;
+    color: #000;
+    font-size: 16px;
+    width: 100%;
+}
+
+.contactUs textarea {
+    min-height: 245px;
+    margin: 30px 0 0;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #636363;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #636363;
+}
+
+.contactUs input[type=submit] {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #2980b9;
+    padding: 18px;
+    border: 3px solid transparent;
+    width: 260px;
+    margin-top: 30px;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.contactUs input[type=submit]:hover {
+   background-color: #fff;
+   color: #2980b9;
+   border: 3px solid #2980b9;
+}
+
+/*************** MEDIA QUERIES FOR THE CONTACT SECTION ****************/
+
+@media only screen and (max-width: 900px) {
+    
+    .contactUs #address, .contactUs #phoneNumber, .contactUs #writeMail  {
+       width: 100%;
+       margin: 1% 0 40px;
+    }
+    
+    .contactUs input[type=text],
+    .contactUs input[type=tel],
+    .contactUs input[type=email],
+    .contactUs textarea {
+        width: 100%;
+         margin: 1%  0;
+    }
+
+}
+
+
+@media only screen and (max-width: 700px) {
+    
+    .contactUs .form-elements {
+        width: 100%;
+        margin: 1% 0;
+    }
+    
+    .contactUs input[type=text],
+    .contactUs input[type=tel],
+    .contactUs input[type=email] {
+         margin: 0;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+    .contactUs .title {
+       font-size: 25px;
+     }
+
+    .contactUs .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+
+    .contactUs input[type=submit] {
+        margin: 15px 0 0;
+    }
+   
+}
+
+
+
+@media only screen and (max-width: 320px) {
+    
+    .contactUs .container{
+       padding: 71px   10px   0;
+       text-align: center;
+   
+    }
+    
+    .contactUs input[type=text],
+    .contactUs input[type=tel],
+    .contactUs input[type=email],
+    .contactUs textarea {
+        padding: 20px  10px;
+    }
+    
+    .contactUs input[type=submit] {
+        width: auto;
+    }
+   
+}
+
+
+/**********************************************************/
+/************** END: CONTACT US SECTION *******************/
+/**********************************************************/
+
+
+
+
+/****************************************************/
+/*************** START: MAP SECTION *****************/
+/****************************************************/
+
+#map {
+    width: 100%;
+    height: 532px;
+    background-color: #2980b9;
+}
+
+/******************************************************/
+/***************** END: MAP SECTION *******************/
+/******************************************************/
+
+
+
+
+/******************************************************/
+/*************** START: FOOTER SECTION ****************/
+/******************************************************/
+
+.footer .container .copyright {
+    text-align: left;
+    padding: 56px 10px;
+}
+
+.footer .container .socialMedia {
+    text-align: left;
+    padding: 47px 0;
+}
+
+.footer .container .copyright a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #2980b9;
+}
+
+/** Social Media Icons **/
+
+.footer ul {
+    list-style-type: none;
+    float: right;
+}
+
+.footer ul li {
+    float: left;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    float: left;
+    margin: 0 10px;
+    padding: 9px 5px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid  #2980b9;
+    background-color: #2980b9;
+    color: #fff;
+    border-radius: 100px;
+    text-align: center;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.footer ul li a:hover {
+    background-color: #fff;
+    color: #2980b9;
+    border: 1px solid #2980b9;
+}
+
+
+/** Scroll To Top **/
+
+.scroll-to-top {
+     right:20px;
+     bottom:20px;
+     font-size: 25px;
+     padding: 5px 15px 10px;
+     background-color: #2980b9;
+     color: #fff;
+     border: 1px solid #fff;
+     position:fixed;
+     text-decoration: none; 
+     -webkit-transition: .3s; 
+     transition: .3s;
+     display: none;
+}
+
+.scroll-to-top:hover {  
+     background-color: #1a5277;
+}
+
+/*************** MEDIA QUERIES FOR THE FOOTER SECTION ****************/
+
+@media only screen and (max-width: 800px) {
+    
+    .footer .container .copyright, .footer .container .socialMedia{
+        text-align: center;
+        width: 100%;
+     }
+    
+    .footer ul {
+        float: none;
+    }
+    
+     .footer ul li {
+        text-align: center;
+        float: none;
+        display: inline-block;
+    }
+    
+    .footer .container .copyright {
+        padding: 56px 10px 10px;
+    }
+
+    .footer .container .socialMedia {
+        padding: 0  0  47px;
+    }
+    
+    .footer .col {
+        margin: 0;
+    }
+    
+   
+}
+
+/******************************************************/
+/*************** END: FOOTER SECTION ******************/
+/******************************************************/
+
+
+
+/******************************************************************************/
+/******************* START: Customising The SLICK Plugin  *********************/
+/******************************************************************************/
+
+/** Dots **/
+
+.slick-dots {
+    bottom: 25px;
+}
+
+.slick-dots li {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  background: transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  text-indent: -999em;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.slick-dots li.slick-active {
+  background: #fff;
+  cursor: default;
+}
+
+
+/** Arrows **/
+
+.slick-prev {
+    left: 25px;
+    z-index: 999;
+}
+
+.slick-next {
+    right: 25px;
+
+}
+
+/******************************************************************************/
+/******************** END: Customising The SLICK Plugin  **********************/
+/******************************************************************************/
+
+
+
+/******************************************************************************/
+/***************  START: Customising Magnific Pop Up Plugin  ******************/
+/******************************************************************************/
+
+
+
+/******* Zoom effect *******/
+
+/* start state */
+.mfp-zoom-in  .mfp-with-anim {
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; 
+    -webkit-transform: scale(0.8); 
+    transform: scale(0.8); 
+}
+  
+.mfp-zoom-in.mfp-bg {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+  
+/* animate in */
+
+.mfp-zoom-in.mfp-ready  .mfp-with-anim {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1); 
+}
+.mfp-zoom-in.mfp-ready.mfp-bg {
+      opacity: 0.8; 
+}
+ 
+/* animate out */
+.mfp-zoom-in.mfp-removing .mfp-with-anim {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8); 
+      opacity: 0;
+}
+.mfp-zoom-in.mfp-removing.mfp-bg {
+      opacity: 0;
+}
+    
+ 
+/******************************************************************************/
+/****************  END: Customising Magnific Pop Up Plugin  *******************/
+/******************************************************************************/
+
+
+/*****************************************************************************************/
+/******************* START: Customising The jQuery Validation Plugin *********************/
+/*****************************************************************************************/
+
+
+.contactUs #contact-form  label.error {
+    color: #e74c3c;
+    text-align: left;
+    display: block;
+}
+
+.contactUs #contact-form   input.error, 
+.contactUs #contact-form   textarea.error {
+    border: 2px solid #e74c3c;
+    outline: none;
+}
+
+@media only screen and (max-width: 480px) {
+   .contactUs #contact-form  label.error {
+        margin-bottom: 10px;
+    }
+}
+
+
+/***************************************************************************************/
+/******************* END: Customising The jQuery Validation Plugin *********************/
+/***************************************************************************************/
+
+
+/*******************************************************************/
+/******************* Hidding Elements On Slide *********************/
+/*******************************************************************/
+
+.js-hidden  {
+    visibility: hidden;
+}
+
+/****************************************************************/
+/******************* END: Elements On Slide *********************/
+/****************************************************************/
+
+
+
